@@ -10,4 +10,4 @@ Cara gunakan tools ini:<br>
 <li>pip install --upgarde pip</li>
 <li>git clone https://github.com/rla0712/nuklir</li>
 <li>cd nuklir</li>
-<li>python nuklir.py<li>
+<li>python nuklir.py</li>
